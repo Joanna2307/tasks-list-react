@@ -1,5 +1,5 @@
 import React from "react";
-import React from ".Form";
+import Form from "./Form";
 import Tasks from "./Tasks";
 
 const tasks = [
