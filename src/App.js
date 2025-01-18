@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "./Form";
+import React from ".Form";
 import Tasks from "./Tasks";
 
 const tasks = [
@@ -18,13 +18,7 @@ function App() {
       <section className="section">
         <h2 className="section__header--first">Dodaj nowe zadanie</h2>
         <div className="section__div">
-          <form className="form">
-            <input
-              className="form__input"
-              placeholder="Co jest do zrobienia?"
-            />
-            <button className="form__button">Dodaj zadanie</button>
-          </form>
+          <Form />
         </div>
       </section>
       <section className="section">
