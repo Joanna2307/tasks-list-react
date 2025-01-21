@@ -130,3 +130,8 @@
 .section__tasksButtons:disabled {
   color: rgb(174 176 176);
 }
+.section__tasksContainer {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
