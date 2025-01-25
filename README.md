@@ -18,7 +18,7 @@ Task List keeps eveything simple and efficient. Start organizing your life today
 
 ## Demo:
 
-https://joanna2307.github.io/tasks-list/
+https://joanna2307.github.io/tasks-list-react/
 
 ### Contact me:
 
