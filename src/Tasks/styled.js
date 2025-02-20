@@ -45,13 +45,13 @@ const SectionDiv = styled.div`
   }
 `;
 
-const List = styled.ul`
+export const List = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
 `;
 
-const ListItem = styled.li`
+export const ListItem = styled.li`
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -60,15 +60,15 @@ const ListItem = styled.li`
   border-bottom: 1px solid #ddd;
 `;
 
-const ListItemDone = styled(ListItem)`
+export const ListItemDone = styled(ListItem)`
   text-decoration: line-through;
 `;
 
-const ListItemHidden = styled(ListItem)`
+export const ListItemHidden = styled(ListItem)`
   display: none;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   background-color: rgb(61, 189, 65);
   border: none;
   color: white;
@@ -87,7 +87,7 @@ const Button = styled.button`
   }
 `;
 
-const ButtonRemove = styled(Button)`
+export const ButtonRemove = styled(Button)`
   background-color: rgb(251, 6, 6);
   margin-left: 150px;
 
@@ -100,7 +100,7 @@ const ButtonRemove = styled(Button)`
   }
 `;
 
-const TasksContainer = styled.div`
+export const TasksContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -109,7 +109,7 @@ const TasksContainer = styled.div`
   background-color: white;
 `;
 
-const TasksButtons = styled.button`
+export const TasksButtons = styled.button`
   color: rgb(3, 130, 130);
   background-color: transparent;
   border: none;
@@ -131,5 +131,3 @@ const TasksButtons = styled.button`
     align-items: center;
   }
 `;
-
-

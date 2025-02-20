@@ -1,7 +1,6 @@
-
 import styled from "styled-components";
 
-const Section = styled.section`
+export const Section = styled.section`
   margin: 15px 0;
   background-color: white;
 `;
@@ -11,7 +10,7 @@ const Header = styled.h2`
   margin: 0;
 `;
 
-const HeaderFirst = styled(Header)`
+export const HeaderFirst = styled(Header)`
   padding: 15px;
   border-bottom: 1px solid #ddd;
   display: grid;
@@ -38,7 +37,7 @@ const HeaderSecond = styled(Header)`
   }
 `;
 
-const SectionDiv = styled.div`
+export const SectionDiv = styled.div`
   padding: 15px;
 
   @media (max-width: 767px) {

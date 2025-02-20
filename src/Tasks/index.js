@@ -1,33 +1,55 @@
 import React from "react";
-import "./style.css";
+import {
+  List,
+  ListItem,
+  ListItemDone,
+  ListItemHidden,
+  Button,
+  ButtonRemove,
+  TasksContainer,
+  TasksButtons,
+} from "./styled";
 
-const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-  <ul className="section__list">
-    {tasks.map((task) => (
-      <li
-        key={task.id}
-        className={`section__listItem${
-          hideDone && task.done ? " section__listItem--hidden" : ""
-        }`}
-      >
-        <button
-          className="section__button"
-          onClick={() => toggleTaskDone(task.id)}
+const Tasks = ({
+  tasks,
+  hideDone,
+  removeTask,
+  toggleTaskDone,
+  markAllDone,
+}) => (
+  <Section>
+    <HeaderFirst>Lista zadań</HeaderFirst>
+    <SectionDiv>
+      <TasksContainer>
+        <TasksButtons
+          onClick={markAllDone}
+          disabled={tasks.every(({ done }) => done)}
         >
-          {task.done ? "✔" : ""}
-        </button>
-        <span className={task.done ? "section__listItem--done" : ""}>
-          {task.content} - {task.id}
-        </span>
-        <button
-          className="section__button section__buttonRemove"
-          onClick={() => removeTask(task.id)}
-        >
-          🗑
-        </button>
-      </li>
-    ))}
-  </ul>
+          Zaznacz wszystkie jako ukończone
+        </TasksButtons>
+      </TasksContainer>
+      <List>
+        {tasks.map((task) => (
+          <ListItem
+            key={task.id}
+            as={hideDone && task.done ? ListItemHidden : "li"}
+          >
+            <Button onClick={() => toggleTaskDone(task.id)}>
+              {task.done ? "✔" : ""}
+            </Button>
+            <span>
+              {task.done ? (
+                <ListItemDone>{task.content}</ListItemDone>
+              ) : (
+                task.content
+              )}
+            </span>
+            <ButtonRemove onClick={() => removeTask(task.id)}>🗑</ButtonRemove>
+          </ListItem>
+        ))}
+      </List>
+    </SectionDiv>
+  </Section>
 );
 
 export default Tasks;
