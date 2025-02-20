@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  text-align: right;
+  font-size: 18px;
+`;
 export const Button = styled.button`
   background-color: rgb(61, 189, 65);
   border: none;

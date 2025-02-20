@@ -4,8 +4,7 @@ export const StyledForm = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 20px;
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin: 10px;
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;

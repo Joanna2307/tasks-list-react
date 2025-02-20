@@ -6,27 +6,11 @@ export const StyledSection = styled.section`
 `;
 
 export const Header = styled.h2`
-  font-size: 20px;
   margin: 0;
-
-  ${({ first }) =>
-    first &&
-    css`
-      padding: 15px;
-      border-bottom: 1px solid #ddd;
-      display: grid;
-      grid-template-columns: 1fr auto auto;
-    `};
-
-  ${({ second }) =>
-    second &&
-    css`
-      padding: 20px;
-      font-size: 15px;
-      border-bottom: 1px solid #ddd;
-      display: grid;
-      grid-template-columns: 1fr auto auto;
-    `};
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
 
   @media (max-width: 767px) {
     display: flex;

@@ -1,8 +1,8 @@
 import React from "react";
-import { Button, TasksButtons } from "./styled";
+import { Wrapper, TasksButtons } from "./styled";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
-  <Button>
+  <Wrapper>
     {tasks.length > 0 && (
       <>
         <TasksButtons
@@ -20,7 +20,7 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
         </TasksButtons>
       </>
     )}
-  </Button>
+  </Wrapper>
 );
 
 export default Buttons;

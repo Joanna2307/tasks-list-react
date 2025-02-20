@@ -11,9 +11,9 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
         <TasksContainer done={task.done}>
           {task.content} - {task.id}
         </TasksContainer>
-        <TasksButtons remove onClick={() => removeTask(task.id)}>
+        <Button remove onClick={() => removeTask(task.id)}>
           🗑
-        </TasksButtons>
+        </Button>
       </ListItem>
     ))}
   </List>
