@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Form = styled.form`
+export const Form = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 20px;
@@ -12,7 +12,7 @@ const Form = styled.form`
   }
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
   padding: 10px;
   height: 40px;
   box-sizing: border-box;
@@ -28,7 +28,7 @@ const Input = styled.input`
   }
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   padding: 10px;
   color: white;
   background-color: rgb(2, 128, 128);

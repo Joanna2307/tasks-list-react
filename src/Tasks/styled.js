@@ -1,5 +1,50 @@
 import styled from "styled-components";
 
+const Section = styled.section`
+  margin: 15px 0;
+  background-color: white;
+`;
+
+const Header = styled.h2`
+  font-size: 20px;
+  margin: 0;
+`;
+
+const HeaderFirst = styled(Header)`
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+`;
+
+const HeaderSecond = styled(Header)`
+  padding: 20px;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+`;
+
+const SectionDiv = styled.div`
+  padding: 25px;
+
+  @media (max-width: 767px) {
+    padding: 20px 15px;
+  }
+`;
+
 const List = styled.ul`
   padding: 0;
   margin: 0;
@@ -86,3 +131,5 @@ const TasksButtons = styled.button`
     align-items: center;
   }
 `;
+
+
