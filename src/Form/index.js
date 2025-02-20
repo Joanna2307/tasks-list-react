@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style.css";
+import { Form as StyledForm, Input, Button } from "./styled"; // Importujemy styled components
 
 const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
@@ -7,7 +7,7 @@ const Form = ({ addNewTask }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     const trimmedNewTaskContent = newTaskContent.trim();
-    if (!trimmedNewTaskContent === "") {
+    if (trimmedNewTaskContent === "") {
       return;
     }
     addNewTask(trimmedNewTaskContent);
@@ -15,15 +15,15 @@ const Form = ({ addNewTask }) => {
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
-      <input
+    <StyledForm onSubmit={onFormSubmit}>
+      <Input
         value={newTaskContent}
-        className="form__input"
         placeholder="Co jest do zrobienia?"
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
-      <button className="form__button">Dodaj zadanie</button>
-    </form>
+      <Button>Dodaj zadanie</Button>
+    </StyledForm>
   );
 };
+
 export default Form;

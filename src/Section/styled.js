@@ -1,85 +1,78 @@
-.section {
+import styled from "styled-components";
+
+const StyledSection = styled.section`
   margin: 15px 0;
   background-color: white;
-}
+`;
 
-.section__header {
+const Header = styled.h2`
   font-size: 20px;
   margin: 0;
-}
+`;
 
-.section__header--first {
+const HeaderFirst = styled(Header)`
   padding: 15px;
-  margin: 0;
-  font-size: 20px;
   border-bottom: 1px solid #ddd;
   display: grid;
   grid-template-columns: 1fr auto auto;
-}
 
-.section__header--second {
-  padding: 20px;
-  margin: 0;
-  font-size: 15px;
-  border-bottom: 1px solid #ddd;
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-}
-
-@media (max-width: 767px) {
-  .section__header--first,
-  .section__header--second {
+  @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+`;
 
-  .section__list {
-    padding: 0 3px;
-    margin: 0;
+const HeaderSecond = styled(Header)`
+  padding: 20px;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
+`;
 
-  .section__listItem {
-    padding: 6px;
-  }
-}
-
-.section__div {
+const SectionDiv = styled.div`
   padding: 15px;
-}
 
-@media (max-width: 767px) {
-  .section__div {
+  @media (max-width: 767px) {
     padding: 20px 15px;
   }
-}
+`;
 
-.section__list {
+const List = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
   background-color: white;
-}
 
-.section__listItem {
+  @media (max-width: 767px) {
+    padding: 0 3px;
+  }
+`;
+
+const ListItem = styled.li`
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid #ddd;
   background-color: white;
-}
 
-@media (max-width: 767px) {
-  .section__listItem {
+  @media (max-width: 767px) {
     padding: 6px;
   }
-}
+`;
 
-.section__listItem--done {
+const ListItemDone = styled(ListItem)`
   text-decoration: line-through;
-}
+`;
 
-.section__listItem--hidden {
+const ListItemHidden = styled(ListItem)`
   display: none;
-}
+`;
