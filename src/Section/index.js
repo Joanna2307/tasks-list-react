@@ -1,14 +1,14 @@
 import React from "react";
-import { Section, HeaderFirst, SectionDiv } from "./styled";
+import { StyledSection, Header, SectionDiv } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent }) => (
-  <Section>
-    <HeaderFirst>
+  <StyledSection>
+    <Header>
       {title}
       {extraHeaderContent}
-    </HeaderFirst>
+    </Header>
     <SectionDiv>{body}</SectionDiv>
-  </Section>
+  </StyledSection>
 );
 
 export default Section;
