@@ -40,7 +40,14 @@ export const TasksButtons = styled.button`
   color: rgb(3, 130, 130);
   background-color: transparent;
   border: none;
-  transition: color 0.8s linear;
+
+  &:active {
+    color: rgb(148, 185, 233);
+  }
+  &:disabled {
+    color: gray;
+    cursor: not-allowed;
+  }
 
   @media (max-width: 767px) {
     display: flex;

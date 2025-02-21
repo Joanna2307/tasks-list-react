@@ -1,17 +1,17 @@
 import React from "react";
-import { List, ListItem, Button, TasksContainer, TasksButtons } from "./styled";
+import { List, ListItem, Button, TasksContainer } from "./styled";
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
   <List>
     {tasks.map((task) => (
-      <ListItem key={task.id} hidden={hideDone && task.done}>
+      <ListItem key={task.id} $hidden={hideDone && task.done}>
         <Button onClick={() => toggleTaskDone(task.id)}>
           {task.done ? "✔" : ""}
         </Button>
-        <TasksContainer done={task.done}>
+        <TasksContainer $done={task.done}>
           {task.content} - {task.id}
         </TasksContainer>
-        <Button remove onClick={() => removeTask(task.id)}>
+        <Button $remove onClick={() => removeTask(task.id)}>
           🗑
         </Button>
       </ListItem>

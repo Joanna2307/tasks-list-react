@@ -13,12 +13,6 @@ export const ListItem = styled.li`
   gap: 15px;
   border-bottom: 1px solid #ddd;
 
-  ${({ $done }) =>
-    $done &&
-    css`
-      text-decoration: line-through;
-    `}
-
   ${({ $hidden }) =>
     $hidden &&
     css`
@@ -27,7 +21,7 @@ export const ListItem = styled.li`
 `;
 
 export const Button = styled.button`
-  background-color: rgb(61, 189, 65);
+  background-color: ${({ remove }) => (remove ? "rgb(239, 24, 42)" : "green")};
   border: none;
   color: white;
   width: 30px;
@@ -36,12 +30,14 @@ export const Button = styled.button`
   transition: background 0.2s;
 
   &:hover {
-    background-color: rgb(80, 225, 85);
+    background-color: ${({ $remove }) =>
+      $remove ? "rgb(255, 80, 80)" : "rgb(80, 225, 85)"};
     cursor: pointer;
   }
 
   &:active {
-    background-color: rgb(53, 190, 50);
+    background-color: ${({ $remove }) =>
+      $remove ? "rgb(239, 24, 42)" : "rgb(53, 190, 50)"};
   }
 
   ${({ $remove }) =>
@@ -67,4 +63,10 @@ export const TasksContainer = styled.div`
   margin: 20px 0;
   padding: 10px;
   background-color: white;
+
+  ${({ $done }) =>
+    $done &&
+    css`
+      text-decoration: line-through;
+    `}
 `;

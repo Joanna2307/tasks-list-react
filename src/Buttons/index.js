@@ -5,16 +5,12 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
   <Wrapper>
     {tasks.length > 0 && (
       <>
-        <TasksButtons
-          onClick={toggleHideDone}
-          className="section__tasksButtons"
-        >
+        <TasksButtons onClick={toggleHideDone}>
           {hideDone ? "Pokaż" : "Ukryj"} ukończone
         </TasksButtons>
         <TasksButtons
-          onClick={setAllDone}
-          className="section__tasksButtons"
           disabled={tasks.every(({ done }) => done)}
+          onClick={setAllDone}
         >
           Ukończ wszystkie
         </TasksButtons>
