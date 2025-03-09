@@ -23,7 +23,7 @@ export const ListItem = styled.li`
 export const Button = styled.button`
   background-color: ${({ remove }) => (remove ? "rgb(239, 24, 42)" : "green")};
   border: none;
-  color: white;
+  color: ${({ theme }) => theme.color.white};
   width: 30px;
   height: 30px;
   margin: 10px;

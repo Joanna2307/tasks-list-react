@@ -29,7 +29,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   padding: 10px;
-  color: white;
+  color: ${({ theme }) => theme.color.white};
   background-color: rgb(2, 128, 128);
   border: none;
   transition: transform 0.25s linear, background 0.75s linear;
@@ -45,7 +45,7 @@ export const Button = styled.button`
 
   &:active {
     outline: 1px solid teal;
-    color: rgb(1, 96, 96);
+    color: ${({ theme }) => theme.color.tealButton};
     transform: scale(1);
   }
 

@@ -8,9 +8,7 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
         <Button onClick={() => toggleTaskDone(task.id)}>
           {task.done ? "✔" : ""}
         </Button>
-        <TasksContainer $done={task.done}>
-          {task.content} - {task.id}
-        </TasksContainer>
+        <TasksContainer $done={task.done}>{task.content}</TasksContainer>
         <Button $remove onClick={() => removeTask(task.id)}>
           🗑
         </Button>

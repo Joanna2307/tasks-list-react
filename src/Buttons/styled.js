@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 export const Button = styled.button`
   background-color: rgb(61, 189, 65);
   border: none;
-  color: white;
+  color:  ${({ theme }) => theme.color.white};
   width: 30px;
   height: 30px;
   margin: 10px;
@@ -37,15 +37,15 @@ export const ButtonRemove = styled(Button)`
 `;
 
 export const TasksButtons = styled.button`
-  color: rgb(3, 130, 130);
+  color: ${({ theme }) => theme.color.teal};
   background-color: transparent;
   border: none;
 
   &:active {
-    color: rgb(148, 185, 233);
+    color: ${({ theme }) => theme.color.tealActive};
   }
   &:disabled {
-    color: gray;
+    color: ${({ theme }) => theme.color.gray};
     cursor: not-allowed;
   }
 
