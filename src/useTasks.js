@@ -5,9 +5,12 @@ const useTasks = () => {
     const savedTasks = localStorage.getItem("tasks");
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
+  const [hideDone, setHideDone] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    if (tasks && tasks.length > 0) {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
   }, [tasks]);
 
   const addNewTask = (content) => {
@@ -30,7 +33,19 @@ const useTasks = () => {
     setTasks((tasks) => tasks.map((task) => ({ ...task, done: true })));
   };
 
-  return { tasks, addNewTask, removeTask, toggleTaskDone, setAllDone };
+  const toggleHideDone = () => {
+    setHideDone((prevHideDone) => !prevHideDone);
+  };
+
+  return {
+    tasks,
+    hideDone,
+    addNewTask,
+    removeTask,
+    toggleTaskDone,
+    setAllDone,
+    toggleHideDone,
+  };
 };
 
 export default useTasks;
