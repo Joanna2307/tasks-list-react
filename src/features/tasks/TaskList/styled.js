@@ -12,12 +12,9 @@ export const ListItem = styled.li`
   align-items: center;
   gap: 15px;
   border-bottom: 1px solid #ddd;
+  padding: 10px;
 
-  ${({ $hidden }) =>
-    $hidden &&
-    css`
-      display: none;
-    `}
+  ${({ $hidden }) => $hidden && `display: none;`}
 `;
 
 export const Button = styled.button`
@@ -42,9 +39,9 @@ export const Button = styled.button`
 
   ${({ $remove }) =>
     $remove &&
-    css`
+    `
       background-color: rgb(251, 6, 6);
-      margin-left: 150px;
+      margin-left: 10px;
 
       &:hover {
         background-color: rgb(255, 80, 80);
@@ -56,6 +53,7 @@ export const Button = styled.button`
     `}
 `;
 
+
 export const TasksContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
@@ -66,7 +64,8 @@ export const TasksContainer = styled.div`
 
   ${({ $done }) =>
     $done &&
-    css`
+    `
       text-decoration: line-through;
+      color: gray;
     `}
 `;
