@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 export const Button = styled.button`
   background-color: rgb(61, 189, 65);
   border: none;
-  color:  ${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.color.white};
   width: 30px;
   height: 30px;
   margin: 10px;

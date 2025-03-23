@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 export const List = styled.ul`
   padding: 0;
   margin: 0;
@@ -67,4 +67,9 @@ export const TasksContainer = styled.div`
       text-decoration: line-through;
       color: gray;
     `}
+`;
+
+export const StyledLink = styled(Link)`
+    color: blue;
+    text-decoration: none;
 `;
