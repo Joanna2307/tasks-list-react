@@ -1,11 +1,11 @@
 import React from "react";
-import Form from ".Form";
+import Form from "./Form";
 import TaskList from "./TaskList";
 import Buttons from "./Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Container from "../../../common/Container";
-import Button from "../Button";
+import ExampleButton from "./ExampleButton";
 import Search from "./Search";
 
 function TasksPage() {
@@ -15,7 +15,7 @@ function TasksPage() {
 
       <Section
         title="Dodaj nowe zadanie"
-        extraHeaderContent={<Button />}
+        extraHeaderContent={<ExampleButton />}
         body={<Form />}
       />
 

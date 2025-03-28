@@ -11,7 +11,7 @@ import ExampleButton from "../ExampleButton";
 
 
 const Buttons = () => {
-  const { tasks, hideDone } = useSelector(selectTasks);
+  const { tasks = [], hideDone } = useSelector(selectTasks);
   const dispatch = useDispatch();
 
   return (
